@@ -33,7 +33,7 @@ sudo apt install python3 python3-pip
 Open your terminal/command prompt in the bot's directory and run:
 
 ```bash
-pip install praw google-generativeai
+pip install praw google-genai
 ```
 
 ### 3. Create a Reddit Bot Account
@@ -117,24 +117,24 @@ source ~/.bashrc
 
 Open `NoFlairBot.py` and modify these key variables:
 
-1. **Change the subreddit** (line 30):
+1. **Change the subreddit** (line 33):
    ```python
    subreddit = reddit.subreddit("YourSubredditName")
    ```
 
-2. **Change the bot username** (line 52):
+2. **Change the bot username** (line 56):
    ```python
    bot_username = "YourBotUsername"
    ```
 
-3. **Change the subreddit name** (line 53):
+3. **Change the subreddit name** (line 57):
    ```python
    subreddit_name = "YourSubredditName"
    ```
 
 ### Customizing Bot Behavior
 
-4. **Adjust the AI prompt** (lines 54-55):
+4. **Adjust the AI prompt** (lines 58-59):
    - Modify the `prompt_template` to change the bot's personality and tone
    - Example for a friendly approach:
    ```python
@@ -142,7 +142,7 @@ Open `NoFlairBot.py` and modify these key variables:
    Politely remind them to add flair. Keep it friendly and brief (2 sentences)."""
    ```
 
-5. **Rate limiting settings** (lines 45-47):
+5. **Rate limiting settings** (lines 48-51):
    ```python
    requests_per_thread = 3  # How many users to reply to per thread
    violation_limit_before_pinned_comment = 10  # Violations before pinned message
@@ -160,7 +160,7 @@ Open `NoFlairBot.py` and modify these key variables:
 
 - **Change post age limit** (line 88): Currently set to 7 days
 - **Adjust rate limits** based on your subreddit's activity level
-- **Modify AI model**: Change `'models/gemini-2.5-flash'` to another Gemini model if needed
+- **Modify AI model**: Change `'gemini-2.5-flash'` to another Gemini model if needed
 
 ## Troubleshooting
 
