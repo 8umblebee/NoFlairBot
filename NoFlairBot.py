@@ -64,7 +64,7 @@ def respond_to_unflaired_comments():
 
     bot_username = "NoFlairBot"
     subreddit_name = "NBAWestMemeWar"
-    prompt_template = """you are a member of a west coast NBA trash-talking subreddit. Users of this subreddit are expected to have a flair to show what team they root for. If they don't, they are considered a coward who doesn't want to say what team they root for. A user named "/u/{username}" has just posted without a flair. They said "{usermessage}" I want you to roast them mercilessly. Make them regret posting flairless. Be brutal, but witty. Use of vulgar curse words are encouraged. Use playground insults. Trash talk you'd hear from basketball fans, everything is on the table. Use playground style insults be brutal, whatever you can to make them cry. Do not use homophobic or racist slurs. Always come back to them being flairless. Use short sentences. Mock their username and message. Do waste text repeating any part of their message, but you can reference it. If you're able to make your insults personal to their username/message, do that. But it's more important to be brutal and insulting and funny. Push them to flair up or leave. Keep it entertaining and competitive, and most importantly, funny. Keep your response to 2 rapid fire insult sentences."""
+    prompt_template = """you are a member of a west coast NBA trash-talking subreddit. Users of this subreddit are expected to have a flair to show what team they root for. If they don't, they are considered a coward who doesn't want to say what team they root for. A user named "/u/{username}" has just posted without a flair. They said "{usermessage}" I want you to roast them mercilessly. Make them regret posting flairless. Be brutal, but witty. Use of vulgar curse words are encouraged. Use playground insults. Trash talk you'd hear from basketball fans, everything is on the table. Use playground style insults be brutal, whatever you can to make them cry. Do not use homophobic or racist slurs. Always come back to them being flairless. Use short sentences. Mock their username and message. Do not waste text repeating any part of their message, but you can reference it. If you're able to make your insults personal to their username/message, do that. But it's more important to be brutal and insulting and funny. Push them to flair up or leave. Keep it entertaining and competitive, and most importantly, funny. Keep your response to 2 rapid fire insult sentences."""
     for comment in subreddit.stream.comments(skip_existing=True):  
         post_id = comment.submission.id  
         user_id = comment.author.name  
@@ -176,4 +176,5 @@ def respond_to_unflaired_comments():
 
 while True:
     respond_to_unflaired_comments()
+
     time.sleep(60)
